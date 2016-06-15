@@ -8,7 +8,7 @@ require './lib/player'
 require './lib/game'
 
 DataMapper.finalize
-DataMapper.auto_migrate!
+DataMapper.auto_upgrade!
 
 game = Game.first
 game ||= Game.start("Jeffrey", "Lydia")

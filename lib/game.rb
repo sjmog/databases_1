@@ -3,20 +3,26 @@ require './lib/printer'
 class Game
   include DataMapper::Resource
 
-  property(:id, Serial)
-  has(n, :players)
-  has(1, :server, 'Player')
+  property :id, Serial
+  has n, :players
+  belongs_to :server, model: Player
 
-  def self.start(player_name_1, player_name_2)
-    players = [Player.create(name: player_name_1), Player.create(name: player_name_2)]
-    create(players: players)
+  def self.start(player_name_1, player_name_2, player_class: Player)
+    players = [player_class.create(name: player_name_1), player_class.create(name: player_name_2)]
+    game = new(players: players).start
   end
 
-  def play
-    server = set_server
+  def start
+    self.server = set_server
     save
-    Printer.new.print_server(server)
-    Printer.new.print_winner(random_player)
+    self
+  end
+
+  def play(printer = Printer.new)
+    self.server = set_server
+    save
+    printer.print_server(server)
+    printer.print_winner(random_player)
   end
 
   private
