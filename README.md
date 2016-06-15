@@ -8,5 +8,14 @@ An exercise to learn three things:
 
 ## Instructions
 
+#### Starter
+
+Collaboratively define the definitions in [this document](definitions.md).
+
+#### Main
+
 You have two classes that constitute a domain, with a mix of computed and property methods (including relations). You must diagram the underlying database structure of these classes.
 
+#### Plenary
+
+Come together to discuss the diagrams drawn.
