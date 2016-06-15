@@ -1,4 +1,4 @@
-# Databases 1
+# Databases 1 (40 minutes)
 
 An exercise to learn three things:
 
@@ -8,14 +8,14 @@ An exercise to learn three things:
 
 ## Instructions
 
-#### Starter
+#### Starter (10 minutes)
 
 Collaboratively define the definitions in [this document](definitions.md).
 
-#### Main
+#### Main (20 minutes)
 
 You have two classes that constitute a domain, with a mix of computed and property methods (including relations). You must diagram the underlying database structure of these classes.
 
-#### Plenary
+#### Plenary (10 minutes)
 
 Come together to discuss the diagrams drawn.
