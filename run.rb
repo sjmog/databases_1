@@ -6,8 +6,6 @@ DataMapper.setup(:default, 'postgres://makerslaptop82@localhost/databases_1')
 
 require './lib/player'
 require './lib/game'
-# require './lib/audience'
-# require './lib/ball'
 
 DataMapper.finalize
 DataMapper.auto_migrate!
